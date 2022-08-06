@@ -108,3 +108,37 @@ $$\int_{-\infty}^{\infty} f_X(x) dx $$
 
 $$P(X = -0.75) = 0$$
 $$P(-1 \leq X \leq -0.75) = 0.25 \times 0.5 = 0.125$$
+
+### Expectation Operator
+- Now that we have defined what a PDF for a random variable is, and how to calculate the probability of certain events happening. A core operation that can be applied to a PDF is the expectation operator:
+$$E(X) = \int_{-\infty}^{\infty} xf_X(x) dx $$
+- The expected value or mean of the random variable is usually for simplicity written as:
+$$\bar{X} = \bar{x} = E(X)$$
+- It is very useful to be able to describe a probability density function or distribution in a few key properties:
+  - Mean
+  - Variance
+  - Skew
+- We can now calculate these properties of a distribution by using the expectation operator.
+#### Distribution Mean(First Moment)
+- The mean of a distribution is just the expected value:
+$$\bar{x} = E(X) $$
+<p align="center"><img src="images/distribution_mean.png" /></p>
+
+#### Distribution Variance(Second Moment)
+- The variance of a distribution a measure of how much the distribution varies from the mean:
+
+$$\sigma^2_X = E[(X - \bar{x})^2]$$
+$$\sigma^2_X = E[X^2 - X\bar{x} + \bar{x}^2]
+             = E(X^2) - 2\bar{x}^2 + \bar{x}^2
+             = E(X^2) - \bar{x}^2$$
+$$X \widetilde (\bar{x}, \sigma^2_X) $$
+
+<p align="center"><img src="images/distribution_variance.png" /></p>
+
+#### Distribution Skewness(Third Moment)
+- The skew of a distribution a measure the asymmetry of the distribution from the mean:
+$$skew = E[(X - \bar{x})^3]$$
+
+$$skewness = skew / \sigma^3_X$$
+
+<p align="center"><img src="images/distribution_skewness.png" /></p>
