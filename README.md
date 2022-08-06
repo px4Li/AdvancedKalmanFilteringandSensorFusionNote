@@ -26,7 +26,7 @@
 
 - After each quick review of the topics, there will be a quiz to see if you have the concepts handled. If you need help understanding the concepts further please look into the additional internal and external course resources.
 
-### Background Topics
+#### Background Topics
 - Basic Probability
 - Probability Density Functions (Gaussian in particular)
 - Multivariate Distributions
@@ -37,12 +37,12 @@
 - Types of Mathematical Models of Systems
 - Estimation as a Probability Problem
 
-### Basic Probability
+#### Basic Probability
 - Probability is a mathematical way of described the likelihood of an event happening. For any Event A, the probability is: $0 \leq P(A) \leq 1$
 - If S is a set of possible events, then the sum of all probabilities in the set must be equal to: $\sum_{e\in S} P(e) = 1$
 - If we know the probability of event A occurring, then the probability of event A not occuring is simply: $P(\urcorner A) = 1-P(A)$
 
-### Mutually Exclusivity
+#### Mutually Exclusivity
 - Mutually Exclusive Events
   
   ```ditaa {cmd=true }
@@ -71,7 +71,7 @@
   Mathematically it can be written as a probability of event A and event B occurring at the same time is equal to non-zero $P(A and B) \neq 0$
   We add up the area of A plus the area of B, we would have already counted (A and B) area twice, then we have to subtract this amount. $P(A or B) = P(A) + P(B) - P(A and B)$
 
-### Conditional Probability
+#### Conditional Probability
 - Events can be considered independent if the likelihood of one event does not affect the likelihood of another occuring.(l.e Roll of a dice, toss of a coin)
 - Dependant events are the opposite. When one event occurs it changes the probability of the other events.
 - The probability of Event A and Event B occurring if they are dependent:
@@ -83,7 +83,28 @@ $$P(A and B) = P(A)P(B)$$
 $$P(A|B) = P(A)$$
 $$P(B|A) = P(B)$$
 
-### Bayes' Theorem
+#### Bayes' Theorem
 - Bayes' Theorem or Bayes' Rule is one of the most important concepts used in Bayesian Estimation(i.e. Probabilistic Estimation)
 - Bayes' Theorem allows you to calculate the likelihood or bounds on an unknown parameter or event based on prior information related to that event (Bayesian inference)
 $$Conditional P(A|B) = {Conditional P(B|A) Marginal P(A) \over Marginal P(B)}$$
+
+### Probability Density Functions
+####Random Variable
+- Mathematics is a very precise and deterministic field, so a way of expressing random events and uncertainties is required.
+- A random variable is a way to mathematically express stochastic outcomes as real numbers.
+$$X : S \rightarrow E$$
+The random variable X has the possibility of being any of the real numbers in E.
+However once the experiment has been carried out the value of the random variable or outcome has been determined. You can then treat the random value as any normal algebraic value.
+
+- Let's say we have a random variable X, but we would like to know how likely each outcome is to occur. Is each outcome equally as likely(ie. a toss of a coin) or are some outcomes more likely to occur than others?
+- We describe and quantify this with Probability Density Functions.
+- PDFs measure the relative likelihood or probability that a specific outcome will occur.
+<p align="center"><img src="images/pdf_likelihood.png" /></p>
+
+$$P(a \leq X \leq b) = \int_{a}^{b} f(x) dx $$
+$$\int_{-\infty}^{\infty} f_X(x) dx $$
+
+<p align="center"><img src="images/ex_pdf.png" /></p>
+
+$$P(X = -0.75) = 0$$
+$$P(-1 \leq X \leq -0.75) = 0.25 \times 0.5 = 0.125$$
