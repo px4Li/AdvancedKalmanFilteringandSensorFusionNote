@@ -70,3 +70,20 @@
   (Event A and Event B ***can*** occur at the same time)
   Mathematically it can be written as a probability of event A and event B occurring at the same time is equal to non-zero $P(A and B) \neq 0$
   We add up the area of A plus the area of B, we would have already counted (A and B) area twice, then we have to subtract this amount. $P(A or B) = P(A) + P(B) - P(A and B)$
+
+### Conditional Probability
+- Events can be considered independent if the likelihood of one event does not affect the likelihood of another occuring.(l.e Roll of a dice, toss of a coin)
+- Dependant events are the opposite. When one event occurs it changes the probability of the other events.
+- The probability of Event A and Event B occurring if they are dependent:
+$$P(A and B) = P(A)P(B|A)$$
+- Conditional Probability:事件A在事件B的条件下发生的概率
+$$Conditinal ProbabilityP(A|B) = {Joint ProbabilityP(A and B) \over Marginal ProbabilityP(B)}$$
+- Independent Events:
+$$P(A and B) = P(A)P(B)$$
+$$P(A|B) = P(A)$$
+$$P(B|A) = P(B)$$
+
+### Bayes' Theorem
+- Bayes' Theorem or Bayes' Rule is one of the most important concepts used in Bayesian Estimation(i.e. Probabilistic Estimation)
+- Bayes' Theorem allows you to calculate the likelihood or bounds on an unknown parameter or event based on prior information related to that event (Bayesian inference)
+$$Conditional P(A|B) = {Conditional P(B|A) Marginal P(A) \over Marginal P(B)}$$
