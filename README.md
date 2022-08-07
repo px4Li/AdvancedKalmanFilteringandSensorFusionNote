@@ -54,8 +54,8 @@
                       +-------+  +-------+
   ```
   (Event A and Event B ***can not*** occur at the same time)
-  Mathematically it can be written as a probability of event A and event B occurring at the same time is equal to zero $P(A and B) = 0$
-  We can say the probability of event A occurring or event B occurring is just a sum of the probabilities. $P(A or B) = P(A) + P(B) = 1$
+  Mathematically it can be written as a probability of event A and event B occurring at the same time is equal to zero $P(A \quad\text{and}\quad B) = 0$
+  We can say the probability of event A occurring or event B occurring is just a sum of the probabilities. $P(A \quad\text{or}\quad B) = P(A) + P(B) = 1$
 
 - Non-Mutually Exclusive Events
   ```ditaa {cmd=true args=["-E"]}
@@ -68,18 +68,18 @@
   ```
 
   (Event A and Event B ***can*** occur at the same time)
-  Mathematically it can be written as a probability of event A and event B occurring at the same time is equal to non-zero $P(A and B) \neq 0$
-  We add up the area of A plus the area of B, we would have already counted (A and B) area twice, then we have to subtract this amount. $P(A or B) = P(A) + P(B) - P(A and B)$
+  Mathematically it can be written as a probability of event A and event B occurring at the same time is equal to non-zero $P(A \quad\text{and}\quad B) \neq 0$
+  We add up the area of A plus the area of B, we would have already counted (A \quad\text{and}\quad B) area twice, then we have to subtract this amount. $P(A \quad\text{or}\quad B) = P(A) + P(B) - P(A \quad\text{and}\quad B)$
 
 #### Conditional Probability
 - Events can be considered independent if the likelihood of one event does not affect the likelihood of another occuring.(l.e Roll of a dice, toss of a coin)
 - Dependant events are the opposite. When one event occurs it changes the probability of the other events.
 - The probability of Event A and Event B occurring if they are dependent:
-$$P(A and B) = P(A)P(B|A)$$
+$$P(A \quad\text{and}\quad B) = P(A)P(B|A)$$
 - Conditional Probability:事件A在事件B的条件下发生的概率
-$$Conditinal ProbabilityP(A|B) = {Joint ProbabilityP(A and B) \over Marginal ProbabilityP(B)}$$
+$$Conditinal ProbabilityP(A|B) = {Joint ProbabilityP(A \quad\text{and}\quad B) \over Marginal ProbabilityP(B)}$$
 - Independent Events:
-$$P(A and B) = P(A)P(B)$$
+$$P(A \quad\text{and}\quad B) = P(A)P(B)$$
 $$P(A|B) = P(A)$$
 $$P(B|A) = P(B)$$
 
@@ -88,29 +88,30 @@ $$P(B|A) = P(B)$$
 - Bayes' Theorem allows you to calculate the likelihood or bounds on an unknown parameter or event based on prior information related to that event (Bayesian inference)
 $$Conditional P(A|B) = {Conditional P(B|A) Marginal P(A) \over Marginal P(B)}$$
 
-#### Quiz 1: Basic Probability Quiz
+<details><summary> Quiz 1: Basic Probability Quiz </summary><div>
+
 1. Probability is the likelihood that a certain event will occur. Let $P(A)$ be the probability that event A will occur. Selet the valid value of $P(A)$:
 
 The valid range is $0 \leq P(A) \leq 1$
 
 2. Let S be a set of all possible events $S={A,B,C,D}$. If $P(A)=0.1$ and $P(B)=0.4$, what is the probability that $P(C or D)$ will occur:
 
-The sum of probability must equal 1, so if $P(A or B or C or D) = P(A) + P(B) + P(C) + P(D) = 1$, $P(C) + P(D) = 1 - 0.5 = P(C or D)$ 
+The sum of probability must equal 1, so if $P(A \quad\text{or}\quad B or C or D) = P(A) + P(B) + P(C) + P(D) = 1$, $P(C) + P(D) = 1 - 0.5 = P(C or D)$ 
 
 3. Let S be a set of all possible events $S={A,B,C,D}, P(A)=0.1, P(B) = 0.4, P(not D) = 0.9$, What is the probability of $P(C)$ and $P(D)$:
 
 $$P(D) = 1 - P(not D) = 1 - 0.9 = 0.1; P(C) = 1 - P(A) - P(B) - P(D) = 1 - 0.1 - 0.4 - 0.1 = 0.4$$
 
-4. Let S be a set of events $S = {A,B}$. $P(A) = 0.5$, $P(A and B) = 4/14$, What is $P(B)$:
+4. Let S be a set of events $S = {A,B}$. $P(A) = 0.5$, $P(A a\quad\text{and}\quadnd B) = 4/14$, What is $P(B)$:
 
-The events are not mutually exclusive, so $P(A or B) = P(A) + P(B) - P(A and B)$. $P(A or B) = 1$, therefore $P(B) = 1 - 7/14 + 4/14 = 11/14$
+The events are not mutually exclusive, so $P(A \quad\text{or}\quad B) = P(A) + P(B) - P(A \quad\text{and}\quad B)$. $P(A \quad\text{or}\quad B) = 1$, therefore $P(B) = 1 - 7/14 + 4/14 = 11/14$
 
 5. A normal full deck of playing cards has 52 cards, with half black and the other half red. So that P(red) = 0.5, P(black) = 0.5. If you randomly select 2 cards from the deck without replacing the card you pulled out, what is the probability of drawing a red card followed by a black card?
-Conditional Probability: $P(A and B) = P(A)P(B|A)$
+Conditional Probability: $P(A \quad\text{and}\quad B) = P(A)P(B|A)$
 
-The probability of drawing a red card is $P(red) = \frac{26}{52}$, then the probability of drawing a black card is $P(black) = \frac{26}{51}$, beacause we already have drew one card. So only 51 card left. $P(A and B) = \frac{26}{52}\frac{26}{51} \approx 0.255$
+The probability of drawing a red card is $P(red) = \frac{26}{52}$, then the probability of drawing a black card is $P(black) = \frac{26}{51}$, beacause we already have drew one card. So only 51 card left. $P(A \quad\text{and}\quad B) = \frac{26}{52}\frac{26}{51} \approx 0.255$
 
-6. If $P(A and B) = P(A)P(B)$, then the events can be considered (select the most correct):
+6. If $P(A \quad\text{and}\quad B) = P(A)P(B)$, then the events can be considered (select the most correct):
 - [x] Independent
 
 7. Given the following information:
@@ -121,6 +122,7 @@ What is the likelihood of rain today?
 Hint: Bayes’ Theorem $P(A|B) = P(B|A) P(A) / P(B)$, find $P(rain|cloudy)$
 
 $$P(rain|cloudy) = \frac{P(cloudy|rain)P(rain)} {P(cloudy)} = 85$$ 
+</div></details>
 
 ### Probability Density Functions
 ####Random Variable
@@ -177,7 +179,7 @@ $$skewness = skew / \sigma^3_X$$
 
 <p align="center"><img src="images/distribution_skewness.png" /></p>
 
-#### Quiz2: Probability Density Function Quiz
+<details><summary> Quiz2: Probability Density Function Quiz </summary><div>
 1. The probability density function shows the likelihood that a specific outcome will occur. If the PDF was integrated from -ve to +ve infinity the value would be:
 - [x] 1
 The total area under the curve must equal 1 for it to be a valid PDF
@@ -198,3 +200,56 @@ The expectation operator is simply the mean of the distribution $$E(X) = (2+6)/2
 5. Which statement about a PDF that has a high variance is incorrect
 - [x] The peak maximum likelihood is very large
 The peak likelihood must be small since the total area for the wide spread must always equal 1. 
+</div></details>
+
+### Multivariate Probability
+#### Multiple Random Variables
+- Let X be a random variable with a pdf of $f_X(x)$ and also let Y be a random variable with a pdf of $f_Y(y)$. It is possible to define the pdf for the joint probability (i.e. probability of X and Y) as $f_XY(x,y)$ or $f(x,y)$ for short.
+- Joint Probability:
+$$P(a \leq X \leq b \quad\text{and}\quad c \leq Y \leq d) = \int_c^d \int_a^b f(x,y)dx dy$$
+
+#### Marginal Density Functions
+$$f_X(x) = \int_-\infty^\infty f(x,y) dy$$
+$$f_Y(y) = \int_-\infty^\infty f(x,y) dx$$
+
+#### Expected Value
+- Single Random Variable:
+$$E[g(x)] = \int_-\infty^\infty g(x)f_X(x) dx$$
+
+- Multiple Random Variable:
+$$E[g(x,y)] = \int_-\infty^\infty \int_-\infty^\infty g(x,y) f(x,y) dx dy$$
+
+#### Independent Random Variables
+- Basic Probability Condition:
+$$P(A \quad\text{and}\quad B) = P(A) P(B)$$
+
+- Density Function Condition:
+$$f_XY(x,y) = f_X(x)f_Y(y)$$
+
+#### Expected Value of Multiplication of Independent Random Variables
+$$E(XY) = \int\int XY f_XY(x,y) dx dy$$
+$$E(XY) = \int\int XY f_X(x)f_Y(y) dx dy$$
+$$E(XY) = \int X f_X(x) dx \int Yf_Y(y) dy$$
+Assuming Independence
+$$E(XY) = E(X)E(Y)$$
+
+#### Expected Value of Sum of Independent Random Variables
+$$z(x,y) = g(x)+h(y)$$
+$$E[z(x,y)] = E[g(x) + h(y)]$$
+$$E(z) = \int\int[g(x)+h(x)]f(x,y)dxdy$$
+$$E(z) = \int\int g(x)f_X(x)f_Y(y)dxdy + \int\int h(y)f_X(x)f_Y(y)dxdy$$
+$$E(z) = \int g(x)f_X(x)dx \int f_Y(y)dy + \int h(y)f_Y(y)dy \int f_X(x)dx$$
+$$E(z) = E[g(x)] + E[h(y)]$$
+$$z=x+y$$
+$$E(x+y)=E(x)+E(y)$$
+
+#### Dependant Random Variables
+- The random variables might not be independent, there might be some correlation between the two.
+<p align="center"><img src="images/dependant_random_variables.png" /></p>
+Covariance:
+
+$$C_{XY} = E[(X-\bar x)(Y - \bar y)] = E(XY) - \bar x \bar y $$
+
+Correlation Coefficient:
+
+$$\rho = {C_{XY} \over \sigma _x \sigma _y}$$
