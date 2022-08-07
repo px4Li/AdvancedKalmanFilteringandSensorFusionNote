@@ -101,7 +101,7 @@ However once the experiment has been carried out the value of the random variabl
 - PDFs measure the relative likelihood or probability that a specific outcome will occur.
 <p align="center"><img src="images/pdf_likelihood.png" /></p>
 
-$$P(a \leq X \leq b) = \int_{a}^{b} f(x) dx $$
+$$P(a \leq X \leq b) = \int_{a}^{b} f_X(x) dx $$
 $$\int_{-\infty}^{\infty} f_X(x) dx $$
 
 <p align="center"><img src="images/ex_pdf.png" /></p>
@@ -142,3 +142,25 @@ $$skew = E[(X - \bar{x})^3]$$
 $$skewness = skew / \sigma^3_X$$
 
 <p align="center"><img src="images/distribution_skewness.png" /></p>
+
+#### Quiz2: Probability Density Function Quiz
+1. The probability density function shows the likelihood that a specific outcome will occur. If the PDF was integrated from -ve to +ve infinity the value would be:
+- [x] 1
+The total area under the curve must equal 1 for it to be a valid PDF
+
+2. Let $f_X(x)$ be a PDF for the random variable X and let $f_X(x)$ be a constant value of 0.5 between -1 and 1 and zero everywhere else. $[f_X(x)=0.5 if -1 \leq x \leq 1 else f_X(x) = 0]$. What is the probability of getting a $0.5P(0.5) = ?$
+  
+- Beacause curve at a single point area is $$P(X=0.5) = 0$$
+
+3. Let $f_X(x)$ be a PFD for the random variable X, where $f_X(x)$ is shown below. What is the probability of getting a number less than -0.25?
+
+$$P(-1 < X < -0.25) = 0.75 \times 0.5 = 0.375$$
+
+4. The expectation operator can be calculate using the $$E(X) = \int_{-\infty}^{\infty} xf_X(x) dx $$ What is the expected value of a PDF shown below:
+<p align="center"><img src="images/Section3_qz2_4.png"/></p>
+
+The expectation operator is simply the mean of the distribution $$E(X) = (2+6)/2 = 4$$
+
+5. Which statement about a PDF that has a high variance is incorrect
+- [x] The peak maximum likelihood is very large
+The peak likelihood must be small since the total area for the wide spread must always equal 1. 
