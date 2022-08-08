@@ -373,6 +373,20 @@ $$X \sim N(\bar X, C_{X}) \quad \quad f_{X}(x) = \frac{1}{(2\pi)^{n/2}|C_{X}|^{1
 
 <p align="center"><img src="images/3D_mgd.png"/></p>
 
-#### Multivariate Gaussian Distribution
 - The mean shifts the centre of the distribution, the variance controls the spread in the different axes, while the cross-covariances control the orientation of the distribution.
 <p align="center"><img src="images/ex_mgd.png"/></p>
+
+<details><summary> Quiz4: Gaussian Probability Density Functions Quiz </summary><div>
+
+1. Let the error on a sensor measurement be described as a normal distribution $N(x,\sigma^2)$ with a given mean x and variance $\sigma^2$. For the 4 sensors below, which sensor below will be the most precise?
+
+- $N(4,1)$ is the most precise has it has the smallest variance
+
+2. Let the error on a sensor measurement be described as a normal distribution $N(x,\sigma^2)$ with a given mean x and variance $\sigma^2$. For the 4 sensors below, which sensor will be the most accurate?
+
+- $N(0,2)$ is the most accurate has it has the smallest mean error.
+
+3. If the error on a sensor measurement is described as a normal distribution $N(x,\sigma^2)$ of $N(2,9)$, what is the largest value you will see with a 99% confidence?
+
+$$3 * \sigma + \mu = 9 + 2 = 11$$
+</div></details>
