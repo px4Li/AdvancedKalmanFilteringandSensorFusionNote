@@ -209,15 +209,15 @@ The peak likelihood must be small since the total area for the wide spread must 
 $$P(a \leq X \leq b \quad\text{and}\quad c \leq Y \leq d) = \int_c^d \int_a^b f(x,y)dx dy$$
 
 #### Marginal Density Functions
-$$f_X(x) = \int_-\infty^\infty f(x,y) dy$$
-$$f_Y(y) = \int_-\infty^\infty f(x,y) dx$$
+$$f_X(x) = \int_{-\infty}^{\infty} f(x,y) dy$$
+$$f_Y(y) = \int_{-\infty}^{\infty} f(x,y) dx$$
 
 #### Expected Value
 - Single Random Variable:
-$$E[g(x)] = \int_-\infty^\infty g(x)f_X(x) dx$$
+$$E[g(x)] = \int_{-\infty}^{\infty} g(x)f_X(x) dx$$
 
 - Multiple Random Variable:
-$$E[g(x,y)] = \int_-\infty^\infty \int_-\infty^\infty g(x,y) f(x,y) dx dy$$
+$$E[g(x,y)] = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x,y) f(x,y) dx dy$$
 
 #### Independent Random Variables
 - Basic Probability Condition:
@@ -253,3 +253,80 @@ $$C_{XY} = E[(X-\bar x)(Y - \bar y)] = E(XY) - \bar x \bar y $$
 Correlation Coefficient:
 
 $$\rho = {C_{XY} \over \sigma _x \sigma _y}$$
+
+#### Multivariate Random Vectors
+- We can generalize single random variables into vector form:
+Each Element is a Random Vraiable
+$$X = \begin{bmatrix}
+        X_1 \\
+        X_2 \\
+        \vdots \\
+        X_n
+      \end{bmatrix}
+      \quad\quad\quad 
+  Y = \begin{bmatrix}
+        Y_1 \\
+        Y_2 \\
+        \vdots \\
+        Y_m
+      \end{bmatrix}$$
+
+#### Multivariate Mean
+- The mean can be calculated in the same way, but on a per element basis:
+$$X = \begin{bmatrix}
+        X_1 \\
+        X_2 \\
+        \vdots \\
+        X_n
+      \end{bmatrix}
+      \quad\quad\quad 
+  \bar X = E(X) = \begin{bmatrix}
+        E(X_1) \\
+        E(X_2) \\
+        \vdots \\
+        E(X_n)
+      \end{bmatrix}$$
+
+#### Multivariate Covariance
+- The covariance between two random variable vectors can be calculated, which now forms a matrix of covariance values:
+
+$$X = \begin{bmatrix}
+        X_1 \\
+        X_2 \\
+        \vdots \\
+        X_n
+      \end{bmatrix}
+      \quad\quad\quad
+  C_{XY} = E[(X-\bar{X})(Y-\bar{Y})^T]=E[(XY^T)-\bar{X}\bar{Y}^T]$$
+
+$$Y = \begin{bmatrix}
+        Y_1 \\
+        Y_2 \\
+        \vdots \\
+        Y_m
+      \end{bmatrix}
+      \quad\quad\quad
+  C_{XY} = \begin{bmatrix}
+            C_{X_1}{Y_1} & C_{X_1}{Y_2} &\dots& C_{X_1}{Y_m} \\
+            C_{X_2}{Y_1} & C_{X_2}{Y_2} &\dots& C_{X_2}{Y_m} \\
+            \vdots& \vdots& \vdots& \vdots\\
+            C_{X_n}{Y_1} & C_{X_n}{Y_2} &\dots& C_{X_n}{Y_m} 
+            \end{bmatrix}$$
+
+#### Autocorrelation Matrix
+- The autocorrelation matrix, is simply the covariance matrix for the random vector and itself:
+$$C_{X} = E[(X-\bar{X})(X-\bar{X})^T]$$
+$$C_{XY} = \begin{bmatrix}
+            \sigma_{X_1}^2 & \sigma_{X_1}{X_2} &\dots& \sigma_{X_1}{X_n} \\
+            \sigma_{X_2}{Y_1} & \sigma_{X_2}^2 &\dots& \sigma_{X_2}{Y_n} \\
+            \vdots& \vdots& \vdots& \vdots\\
+            \sigma_{X_n}{X_1} & \sigma_{X_n}{X_2} &\dots& C_{X_n}^2
+            \end{bmatrix}$$
+
+#### Covariance Matrix Properties
+- The covariance matrix(autocorrelation) is :
+  - Symmetric
+  - Positive Semidefinite
+  $$\sigma_{ij} = \sigma_{ji}$$
+  $$C_{X} = C_{X}^T$$
+  $$z^{T} C_{X} z \geq 0$$
