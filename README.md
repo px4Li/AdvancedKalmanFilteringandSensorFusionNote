@@ -380,13 +380,44 @@ $$X \sim N(\bar X, C_{X}) \quad \quad f_{X}(x) = \frac{1}{(2\pi)^{n/2}|C_{X}|^{1
 
 1. Let the error on a sensor measurement be described as a normal distribution $N(x,\sigma^2)$ with a given mean x and variance $\sigma^2$. For the 4 sensors below, which sensor below will be the most precise?
 
-- $N(4,1)$ is the most precise has it has the smallest variance
+  - $N(4,1)$ is the most precise has it has the smallest variance
 
 2. Let the error on a sensor measurement be described as a normal distribution $N(x,\sigma^2)$ with a given mean x and variance $\sigma^2$. For the 4 sensors below, which sensor will be the most accurate?
 
-- $N(0,2)$ is the most accurate has it has the smallest mean error.
+  - $N(0,2)$ is the most accurate has it has the smallest mean error.
 
 3. If the error on a sensor measurement is described as a normal distribution $N(x,\sigma^2)$ of $N(2,9)$, what is the largest value you will see with a 99% confidence?
 
 $$3 * \sigma + \mu = 9 + 2 = 11$$
 </div></details>
+
+### Linear Transformation of Uncertainties
+- Random variables can be transformed through a function. Suppose we have a random variable X and its associated PDF $f_{X}(x)$, it is possible to apply a mathematical function $y = g(x) to the PDF and find the PDF $f_{Y}(y)$ of the transformed random variable Y.
+
+Assume th transformation functions are monotonic
+
+$$y = g(x)$$
+$$x = g(y)^{-1} = h(y)$$
+$$f_{Y}(y) = |h^{'}(y)|f_{X}(h(y))$$
+
+Suppose we have the random variable:
+$$X \sim N(\bar x, \sigma_{x}^2)$$
+$$f_{X}(x) = \frac{1}{\sigma_{x}\sqrt{2 \pi}} exp [-\frac{1}{2}(\frac{x- \bar x}{\sigma_{x}})^2]$$
+
+Suppose we have the transformation:
+$$Y = g(X) = aX + b$$
+$$X = g^{-1}(Y) = {\frac{Y-b}{a}}$$
+$$h(Y) = {\frac{Y-b}{a}}$$
+$$h^{'}(y) = {\frac{1}{a}}$$
+
+Using the relationship:
+$$f_{Y}(y) = |h^{'}(y)|f_{X}(h(y))$$
+We find:
+$$f_{Y}(y) = \frac{1}{a\sigma_{x}\sqrt{2 \pi}} exp [-\frac{1}{2}(\frac{y- (a\bar{x}+b)}{a\sigma_{x}})^2]$$
+$$(a\bar{x}+b) \Rightarrow \bar{y} = a\bar{x} +b$$
+$$a\sigma_{x} \Rightarrow \sigma_{y}^{2} = a^{2}\sigma_{x}^{2}$$
+
+#### Linear Transformation of Gaussian PDF
+- A linear transformation of a Gaussian PDF is just another Gaussian PDF with the mean and variance transformed
+
+$$X \sim N(\bar x, \sigma_{x}^{2}) \longrightarrow Y = aX + b \longrightarrow Y \sim N(a\bar{x} + b, a^{2}\sigma_{x}^{2})$$
