@@ -257,6 +257,7 @@ $$\rho = {C_{XY} \over \sigma _x \sigma _y}$$
 #### Multivariate Random Vectors
 - We can generalize single random variables into vector form:
 Each Element is a Random Vraiable
+
 $$X = \begin{bmatrix}
         X_1 \\
         X_2 \\
@@ -273,6 +274,7 @@ $$X = \begin{bmatrix}
 
 #### Multivariate Mean
 - The mean can be calculated in the same way, but on a per element basis:
+
 $$X = \begin{bmatrix}
         X_1 \\
         X_2 \\
