@@ -125,7 +125,7 @@ $$P(rain|cloudy) = \frac{P(cloudy|rain)P(rain)} {P(cloudy)} = 85$$
 </div></details>
 
 ### Probability Density Functions
-####Random Variable
+#### Random Variable
 - Mathematics is a very precise and deterministic field, so a way of expressing random events and uncertainties is required.
 - A random variable is a way to mathematically express stochastic outcomes as real numbers.
 $$X : S \rightarrow E$$
@@ -357,3 +357,22 @@ $$C_{XY} = \begin{bmatrix}
   - [x] $C^{-1} = C$
 
 </div></details>
+
+### Gaussian Probability Distributions
+#### Gaussian Distribution (Continuous)
+<p align="center"><img src="images/gaussian_distribution_continuous.png"/></p>
+<p align="center"><img src="images/gdc_ex_car.png"/></p>
+
+#### Multivariate Gaussian Distribution
+
+Random Variable:
+$$X \sim N(\mu, \sigma^2) \quad \quad f_{X}(x) = \frac{1}{\sigma\sqrt{2 \pi}} e ^{\frac{-1}{2}(\frac{x-\mu}{\sigma})^2}$$
+
+Random Vector:
+$$X \sim N(\bar X, C_{X}) \quad \quad f_{X}(x) = \frac{1}{(2\pi)^{n/2}|C_{X}|^{1/2}} e ^{[-\frac{1}{2}(X-\bar X)^{T}C_{X}^{-1}(X-\bar X)]}$$
+
+<p align="center"><img src="images/3D_mgd.png"/></p>
+
+#### Multivariate Gaussian Distribution
+- The mean shifts the centre of the distribution, the variance controls the spread in the different axes, while the cross-covariances control the orientation of the distribution.
+<p align="center"><img src="images/ex_mgd.png"/></p>
