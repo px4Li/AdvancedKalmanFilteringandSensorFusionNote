@@ -180,7 +180,9 @@ $$skewness = skew / \sigma^3_X$$
 <p align="center"><img src="images/distribution_skewness.png" /></p>
 
 <details><summary> Quiz2: Probability Density Function Quiz </summary><div>
+
 1. The probability density function shows the likelihood that a specific outcome will occur. If the PDF was integrated from -ve to +ve infinity the value would be:
+
 - [x] 1
 The total area under the curve must equal 1 for it to be a valid PDF
 
@@ -193,6 +195,7 @@ The total area under the curve must equal 1 for it to be a valid PDF
 $$P(-1 < X < -0.25) = 0.75 \times 0.5 = 0.375$$
 
 4. The expectation operator can be calculate using the $$E(X) = \int_{-\infty}^{\infty} xf_X(x) dx $$ What is the expected value of a PDF shown below:
+
 <p align="center"><img src="images/Section3_qz2_4.png"/></p>
 
 The expectation operator is simply the mean of the distribution $$E(X) = (2+6)/2 = 4$$
@@ -224,12 +227,12 @@ $$E[g(x,y)] = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x,y) f(x,y) dx d
 $$P(A \quad\text{and}\quad B) = P(A) P(B)$$
 
 - Density Function Condition:
-$$f_XY(x,y) = f_X(x)f_Y(y)$$
+$$f_{XY}(x,y) = f_X(x)f_Y(y)$$
 
 #### Expected Value of Multiplication of Independent Random Variables
-$$E(XY) = \int\int XY f_XY(x,y) dx dy$$
+$$E(XY) = \int\int XY f_{XY}(x,y) dx dy$$
 $$E(XY) = \int\int XY f_X(x)f_Y(y) dx dy$$
-$$E(XY) = \int X f_X(x) dx \int Yf_Y(y) dy$$
+$$E(XY) = \int X f_X(x) dx \int Y f_Y(y) dy$$
 Assuming Independence
 $$E(XY) = E(X)E(Y)$$
 
@@ -311,24 +314,46 @@ $$Y = \begin{bmatrix}
   C_{XY} = \begin{bmatrix}
             C_{X_1}{Y_1} & C_{X_1}{Y_2} &\dots& C_{X_1}{Y_m} \\
             C_{X_2}{Y_1} & C_{X_2}{Y_2} &\dots& C_{X_2}{Y_m} \\
-            \vdots& \vdots& \vdots& \vdots\\
+            \vdots& \vdots& \ddots& \vdots\\
             C_{X_n}{Y_1} & C_{X_n}{Y_2} &\dots& C_{X_n}{Y_m} 
             \end{bmatrix}$$
 
 #### Autocorrelation Matrix
 - The autocorrelation matrix, is simply the covariance matrix for the random vector and itself:
+
 $$C_{X} = E[(X-\bar{X})(X-\bar{X})^T]$$
 $$C_{XY} = \begin{bmatrix}
             \sigma_{X_1}^2 & \sigma_{X_1}{X_2} &\dots& \sigma_{X_1}{X_n} \\
             \sigma_{X_2}{Y_1} & \sigma_{X_2}^2 &\dots& \sigma_{X_2}{Y_n} \\
-            \vdots& \vdots& \vdots& \vdots\\
-            \sigma_{X_n}{X_1} & \sigma_{X_n}{X_2} &\dots& C_{X_n}^2
+            \vdots& \vdots& \ddots& \vdots\\
+            \sigma_{X_n}{X_1} & \sigma_{X_n}{X_2} &\dots& \sigma_{X_n}^2
             \end{bmatrix}$$
 
 #### Covariance Matrix Properties
 - The covariance matrix(autocorrelation) is :
   - Symmetric
   - Positive Semidefinite
+
   $$\sigma_{ij} = \sigma_{ji}$$
   $$C_{X} = C_{X}^T$$
   $$z^{T} C_{X} z \geq 0$$
+
+<details><summary> Quiz 3: Multivariate Probability Quiz </summary><div>
+
+1. There are two dice, with X and Y being the random variables for the numbers on each of the dice. Each roll has a probability of $1\over 6$ of rolling numbers 1 through to 6. So $E(X) \: and \: E(Y) = 3.5$. What is the expected value when both dice are rolled together at the same time $E(X+Y)$?
+
+  - Both events are independent so $E(X+Y) = E(X) + E(Y)$
+
+2. There are two dice, with X and Y being the random variables for the numbers on each of the dice. Each roll has a probability of $1\over 6$ of rolling numbers 1 through to 6. So $E(X) \: and \: E(Y) = 3.5$. What is the cross-covariance between the dice?
+
+  - The dice are independent $C_{XY} = E(XY) - E(X)E(Y) = 0$
+
+3. Let X be a random variable with mean $E(x) = 3$ and let Y be a random variable with mean $E(y) = 2$, the probability density function for X and Y can be expressed in the form: $f_{XY}(x,y)=f_X(x)f_Y(y)$. Let $g(x,y) = X+2Y$, what is $E(g)$?
+
+  - $E(X+2Y)=E(X)+2 * E(Y)$ since X and Y are independet.
+
+4. Let C be a covariance matrix, which of the following rules is not true?
+
+  - [x] $C^{-1} = C$
+
+</div></details>
