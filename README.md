@@ -459,6 +459,20 @@ $$Y \sim N(A\bar{X} + b,AC_{X}A^{T})$$
 2. Let X be a 2D normal distribution with mean vector $[2,1]^T$ and covariance matrix $\begin{bmatrix}2&0 \\ 0&4\end{bmatrix}$, then if the distribution is transformed by transformation $A = \begin{bmatrix}1&0 \\ 0&-1\end{bmatrix}$, then what is the resulting distribution?
 
 
-$$\begin{bmatrix}1&0 \\ 0&-1\end{bmatrix} \begin{bmatrix}2 \\ 1\end{bmatrix} = \begin{bmatrix}2 \\ -1\end{bmatrix}$$
-$$\begin{bmatrix}1&0\\ 0&-1\end{bmatrix} \begin{bmatrix}2&0 \\ 0&4\end{bmatrix} \begin{bmatrix}1&0 \\ 0&-1\end{bmatrix} = \begin{bmatrix}2&0 \\ 0&-4\end{bmatrix}$$
+$$\begin{bmatrix}1 & 0\\ 
+0 & -1\end{bmatrix} 
+\begin{bmatrix}2\\ 
+1\end{bmatrix} 
+= \begin{bmatrix}2\\ 
+-1\end{bmatrix}$$
+
+$$\begin{bmatrix}1 & 0\\ 
+0 & -1\end{bmatrix} 
+\begin{bmatrix}2 & 0\\
+0 & 4\end{bmatrix} 
+\begin{bmatrix}1 & 0\\
+0 & -1\end{bmatrix} 
+= \begin{bmatrix}2 & 0\\ 
+0 & -4\end{bmatrix}$$
+
 </div></details>
