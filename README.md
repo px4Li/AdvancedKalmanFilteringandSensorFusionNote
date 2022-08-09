@@ -421,3 +421,31 @@ $$a\sigma_{x} \Rightarrow \sigma_{y}^{2} = a^{2}\sigma_{x}^{2}$$
 - A linear transformation of a Gaussian PDF is just another Gaussian PDF with the mean and variance transformed
 
 $$X \sim N(\bar x, \sigma_{x}^{2}) \longrightarrow Y = aX + b \longrightarrow Y \sim N(a\bar{x} + b, a^{2}\sigma_{x}^{2})$$
+
+#### Linear Transformation of Multivariate Gaussian Distribution
+- Suppose we have the random vector:
+$$X \sim N(\bar{X}, C_{X})$$
+
+- Suppose we have the transformation:
+$$Y = g(X) = AX + b$$
+$$X = g^{-1}(Y) = A^{-1}Y - A^{-1}b$$
+$$h(Y) = A^{-1}Y - A^{-1}b$$
+$$h^{'}(y) = A^{-1}$$
+
+- Using the relationship:
+$$f_{Y}(y) = |h^{'}(y)|f_{X}(h(y))$$
+
+- We find:
+$$f_{Y}(y) = \frac{1}{(2\pi)^{n/2}{|AC_{X}A^{T}|^{1/2}}} e^{[-\frac{1}{2}(Y-\bar{Y})^T(AC_{X}A^{T})^{-1}(Y-\bar{Y})]}$$
+$$\bar{Y} \longrightarrow \bar{Y} = A\bar{X} + b$$
+$$AC_{X}A^{T} \longrightarrow C_{Y} = AC_{X}A^{T}$$
+
+- A linear transformation of a Gaussian PDF is just another Gaussian PDF with the mean and variance transformed
+$$X \sim N(\bar{X}, C_{X})$$
+$$\Downarrow$$
+$$Y = AX + b$$
+$$\Downarrow$$
+$$Y \sim N(A\bar{X} + b,AC_{X}A^{T})$$
+
+#### Linear Transformation of Uncertainty
+- If $C_{X}$ represents the uncertinty covariance, then it can be transformed to another frame using the linear transform $y = Ax$ where the transformed covariance is given by $C_{Y} = AC_{X}A^{T}$.
