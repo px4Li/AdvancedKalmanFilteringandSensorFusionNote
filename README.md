@@ -449,3 +449,16 @@ $$Y \sim N(A\bar{X} + b,AC_{X}A^{T})$$
 
 #### Linear Transformation of Uncertainty
 - If $C_{X}$ represents the uncertinty covariance, then it can be transformed to another frame using the linear transform $y = Ax$ where the transformed covariance is given by $C_{Y} = AC_{X}A^{T}$.
+
+<details><summary>Quiz 5: Linear Transfomation of Uncertainties Quiz</summary><div>
+
+1. Let X be a RV with a normal distribution $N(2,4)$, what is the distribution of Y, if $Y = 2X - 4$?
+
+- If $N(X, \sigma^{2}) \Rightarrow N(2, 4)$ and $Y = 2X - 4$, then $Y = N(2 * 2 - 4, 2^{2} * 2^{2})$
+
+2. Let X be a 2D normal distribution with mean vector $[2,1]^T$ and covariance matrix $\begin{bmatrix}2&0\\0&4\end{bmatrix}$, then if the distribution is transformed by transformation $A = \begin{bmatrix}1&0\\0&-1\end{bmatrix}$, then what is the resulting distribution?
+
+
+$$\begin{bmatrix}1&0\\0&-1\end{bmatrix} \begin{bmatrix}2\\1\end{bmatrix} = \begin{bmatrix}2\\-1\end{bmatrix}$$
+$$\begin{bmatrix}1&0\\0&-1\end{bmatrix} \begin{bmatrix}2&0\\0&4\end{bmatrix} \begin{bmatrix}1&0\\0&-1\end{bmatrix} = \begin{bmatrix}2&0\\0&-4\end{bmatrix}$$
+</div></details>
