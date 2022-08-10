@@ -476,3 +476,39 @@ $$\begin{bmatrix}1 & 0\\
 0 & -4\end{bmatrix}$$
 
 </div></details>
+
+### Differential Equations
+- An equation that relates one or more functions and their derivatives together.
+#### Classical Mechanics:
+Velocity and Position:
+$$v = \frac{dp}{dt}$$
+Acceleration, Velocity and Position:
+$$a = \frac{dv}{dt} = \frac{d^{2}p}{dt^{2}}$$
+
+$$Differential \; Equations$$
+$$\swarrow \hspace{240pt} \searrow$$
+$$ODE \hspace{240pt} PDE\\ (Ordinary Differential Equations) \hspace{100pt} (Partial Differential Equations)\\ \frac{d}{dx}f(x) \hspace{230pt} \frac{\partial}{\partial{x}}f(x,y)\\ a =  \frac{dv}{dt} = \frac{d^{2}p}{dt^{2}} \hspace{200pt} \frac{\partial{2}u}{\partial{x^{2}}} + \frac{\partial^{2}u}{\partial{y^{2}}} = 0$$
+
+#### Order of Differential Equation
+n-th Equation Oerder:
+
+$$f_{n}(\cdot) \frac{d^{n}y}{dx^{n}}+ \ldots + f_{1}(\cdot) \frac{dy}{dx} + f_{0}(\cdot)y = g(\cdot)$$
+
+Examples:
+$$Second \; Order:\quad \frac{d^{2}u}{dx^{2}} - x\frac{du}{dx} +u=0$$
+$$First \; Oder:\quad \frac{du}{dx} = a+u^{2}$$
+
+$$v=\frac{dp}{dt}\hspace{95pt} a=\frac{d^{2}p}{dt^{2}}\\ Velocity(First \; Order)\hspace{35pt} Acceleration(Second \;Order)$$
+
+#### Linear and Nonlinear
+- A linear system is a system which output changes **proportionally** with the input. Linear equations conform with the properties:
+$$Additivity:\quad f(u+v) = f(u) + f(v)$$
+$$Homogeneity:\quad f(cu) = cf(u) $$
+
+#### Linear ODE
+- Both sides of the equation are a **linear combination** of the dependent variable and its derivatives.
+$$a_{n}(x)\frac{d^{n}y}{dx^{n}} + \ldots + a_{1}\frac{dy}{dx} + a_{0}(x)y = b(x)$$
+
+Examples:
+$$Linear \; ODE: \quad \frac{dy}{dx} + cy + x^{2} = 0$$
+$$Non-Linear \; ODE:  \quad \frac{dy}{dx} + a\sin (y) = 0$$
