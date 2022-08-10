@@ -512,3 +512,18 @@ $$a_{n}(x)\frac{d^{n}y}{dx^{n}} + \ldots + a_{1}\frac{dy}{dx} + a_{0}(x)y = b(x)
 Examples:
 $$Linear \; ODE: \quad \frac{dy}{dx} + cy + x^{2} = 0$$
 $$Non-Linear \; ODE:  \quad \frac{dy}{dx} + a\sin (y) = 0$$
+
+### State Space Representation
+#### Dynamic Systems
+- A system is a collection of interrelated entities (or differential equations) that can be considered as a whole.
+- If the different process that make up this system change with time, then it is considered as a dynamic system.
+
+The differential equations that make up the system are the state equations of the dynamic system. The state variables of the sytem are the dependant variables of the state equations.
+
+- Consider the system of time varying, first-order differential equations:
+$$n-State\; Equations \begin{cases}\dot{x_{1}} = f_{1}(t,x_{1},x_{2},\ldots,x_{n},u_{1},u_{2},\ldots,u_{m})\\
+\dot{x_{2}} = f_{2}(t,x_{1},x_{2},\ldots,x_{n},u_{1},u_{2},\ldots,u_{m})\\
+\dot{x_{3}} = f_{3}(t,x_{1},x_{2},\ldots,x_{n},u_{1},u_{2},\ldots,u_{m})\\
+\vdots\\
+\dot{x_{n}} = f_{n}(t,x_{1},x_{2},\ldots,x_{n},u_{1},u_{2},\ldots,u_{m})\end{cases}\\
+\hspace{100pt}Time\; Varying \hspace{10pt} n-States\hspace{10pt} m-Inputs$$
