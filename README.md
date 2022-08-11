@@ -527,3 +527,17 @@ $$n-State\; Equations \begin{cases}\dot{x_{1}} = f_{1}(t,x_{1},x_{2},\ldots,x_{n
 \vdots\\
 \dot{x_{n}} = f_{n}(t,x_{1},x_{2},\ldots,x_{n},u_{1},u_{2},\ldots,u_{m})\end{cases}\\
 \hspace{100pt}Time\; Varying \hspace{10pt} n-States\hspace{10pt} m-Inputs$$
+
+This can compactly be written as:
+$$\dot{x}(t) = f(t,x(t),u(t))$$
+where:
+$$State\; Vector: x(t) = [x_{1}(t),x_{2}(t),\ldots,u_{n}(t)]^{T}$$
+$$Input\; Vector: u(t) = [u_{1}(t),u_{2}(t),\ldots,u_{m}(t)]^{T}$$
+
+- Many of the processes that occur in the world can be expressed as linear or non-linear differential equations.
+- We can describe these processes in state-space form which then allow us to use different mathematical tools to extract useful information and perform various analysis on the system.
+- If the know the state of the system for the current time and all the current and fuutre inputs to that system, then we can predict the values of the future states and outputs of that system and a lot more.
+
+The Solar System is a Dynamic System:
+- Issac Newtons's first use of calculus was to describe the differential equations of the orbit of objects in the solar system.
+- If you consider the solar system as a dynamic system, if you know the position of the planets for a given point in time, then you can predict where the planets will be at any point in the future or past.
