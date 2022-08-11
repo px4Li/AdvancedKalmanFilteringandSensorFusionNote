@@ -541,3 +541,22 @@ $$Input\; Vector: u(t) = [u_{1}(t),u_{2}(t),\ldots,u_{m}(t)]^{T}$$
 The Solar System is a Dynamic System:
 - Issac Newtons's first use of calculus was to describe the differential equations of the orbit of objects in the solar system.
 - If you consider the solar system as a dynamic system, if you know the position of the planets for a given point in time, then you can predict where the planets will be at any point in the future or past.
+
+
+### Continuous and Discrete Time
+#### Continuous Time
+- The differential equations shown so far have all been in 'continuous' time.
+  - Defined with respect to an independent variable (t) which varies continuously and smoothly.
+- For many practical purposes, we only really need to know the state of the sytem at a discrete set of point in time.
+$$t_{0},t_{1},t_{2},\ldots,t_{k-1},t_{k},t_{k+1},\ldots\\
+0.0s, 0.1s, 0.2s, \ldots\\
+0.0s, 2.0s, 4.0s, \ldots$$
+- This is what is called 'discrete' time.
+
+- Time steps forward in discrete blocks of time.
+- Timestep/Sample Time is how large the blocks of time are.
+$$Continuous \; time: \quad \dot{x}(t) = f(t,x(t),u(t))$$
+$$Discrete \; time: \quad x(t_{k+1}) = f(t_{k},x(t_{k}),u(t_{k}))\\
+\hspace{18pt} t_{k}=k\Delta t$$
+
+<p align="center"><img src="images/discrete_time.png"/></p>
