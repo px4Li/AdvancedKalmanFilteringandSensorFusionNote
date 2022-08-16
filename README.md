@@ -580,3 +580,15 @@ $$Discrete \; time: \quad x(t_{k+1}) = f(t_{k},x(t_{k}),u(t_{k}))\\
 
 #### discrete Non-Linear Model
 <p align="center"><img src="images/discrete_nonlinear_model.png" /></p>
+
+### Discrete Model Conversion
+<p align="center"><img src="images/continuous_discrete_conversion.png" /></p>
+
+#### Continuous System
+<p align="center"><img src="images/continuous_system.png" /></p>
+
+#### Continuous to Discrete Conversion
+<p align="center"><img src="images/continuous_to_discrete_conversion.png" /></p>
+
+#### Matrix Exponential
+<p align="center"><img src="images/matrix_exponential.png" /></p>
