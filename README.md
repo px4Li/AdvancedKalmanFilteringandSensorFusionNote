@@ -560,3 +560,23 @@ $$Discrete \; time: \quad x(t_{k+1}) = f(t_{k},x(t_{k}),u(t_{k}))\\
 \hspace{18pt} t_{k}=k\Delta t$$
 
 <p align="center"><img src="images/discrete_time.png"/></p>
+
+### Mathematical Models
+<p align="center"><img src="images/mathematical_models.png"/></p>
+
+#### Continuous Non-Linear Model
+<p align="center"><img src="images/continuous_nonlinear_model.png"/></p>
+
+<p align="center"><img src="images/math_models_table.png" /></p>
+
+#### Continuous linear model
+<p align="center"><img src="images/continuous_linear_model.png" /></p>
+
+#### Continuous Non-Linear Model
+<p align="center"><img src="images/continuous_nonlinear_model.png" /></p>
+
+#### discrete Linear Model
+<p align="center"><img src="images/discrete_linear_model.png" /></p>
+
+#### discrete Non-Linear Model
+<p align="center"><img src="images/discrete_nonlinear_model.png" /></p>
